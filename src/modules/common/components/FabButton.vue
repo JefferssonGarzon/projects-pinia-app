@@ -6,12 +6,13 @@
 
 <script lang="ts" setup>
 interface Props {
-  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
   roundShape?: 'btn-circle' | null;
 }
 
 withDefaults(defineProps<Props>(), {
   position: 'bottom-right',
+  roundShape: 'btn-circle',
 });
 
 defineEmits(['click']);
